@@ -1,0 +1,75 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>405</x><y>54</y><w>324</w><h>144</h></coordinates><panel_attributes>Habilidad
+--
+- IdHabilidad: byte
+- Nombre: string
+-Descripcion: string
+
+--
+    void AltaHabilidades(Habilidades habilidades);
+    public Habilidades? ObtenerHabilidades(byte idHabilidad);
+    public List&lt;Habilidades&gt; ObtenerHabilidades();</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>216</y><w>306</w><h>171</h></coordinates><panel_attributes>Jugador
+--
+- IdJugador: ushort
+- Usuairio: string
+- Nombre: string
+- Apellido: string
+- Contraseña: string
+- Monedas: ushort
+--
+    void AltaJugadores(Jugadores jugadores);
+    public Jugadores? ObtenerJugadores(ushort idJugador);
+    public List&lt;Jugadores&gt; ObtenerJugadores();</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>9</x><y>468</y><w>378</w><h>180</h></coordinates><panel_attributes>Transferencia
+--
+- IdTransferencia: uint
+- IdFutbolista: ushort
+- IdVendedor: uint
+- IdComprador: uint
+- Fecha: string
+- Precio: uint
+- Transferencia_exitosa: bool
+--
+    void AltaTransferencias(Transferencias transferencias);
+    public Transferencias? ObtenerTransferencias(byte idTransferencia);
+    public List&lt;Transferencias&gt; ObtenerTransferencias();</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>387</x><y>234</y><w>324</w><h>198</h></coordinates><panel_attributes>Futbolistas
+--
+- IdFutbolista: ushort
+- IdPosicion: ushort	
+- Nombre: string
+- Apellido: string
+- Nacimiento: String
+- Velocidad: byte
+- Remate:; byte
+- Pase: byte
+- Defensa: byte
+--
+    void AltaFutbolistas(Futbolistas futbolistas);
+    public Futbolistas? ObtenerFutbolistas(ushort idFutbolista);
+    public List&lt;Futbolistas&gt; ObtenerFutbolistas();
+
+
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>495</x><y>567</y><w>306</w><h>126</h></coordinates><panel_attributes>Posicion
+
+--
+- IdPosicion: byte
+- Nombre: string
+--
+    void AltaPosiciones(Posiciones posiciones);
+    public Posiciones? ObtenerPosiciones(byte idPosicion);
+    public List&lt;Posiciones&gt; ObtenerPosiciones();</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>81</x><y>378</y><w>36</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>14;10;20;100</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>189</y><w>45</w><h>63</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>14;50;30;10</additional_attributes></element><element><id>Relation</id><coordinates><x>378</x><y>423</y><w>117</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>104;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>567</x><y>423</y><w>99</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>756</x><y>369</y><w>396</w><h>135</h></coordinates><panel_attributes>Posesion
+--
+IdFutbolista: ushort
+IdJugador: ushort
+-
+void AltaPosesion(Posesion posesion);
+    public Posesion? ObtenerPosesion(ushort idJugador,ushort idFutbolista);
+  public List&lt;Posesion&gt; ObtenerPosesion();</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>756</x><y>135</y><w>387</w><h>144</h></coordinates><panel_attributes>PosesionHabilidad
+--
+IdFutbolista: ushort
+IdHabilidad:  byte
+--
+void AltaPosesionHabilidad(PosesionHabilidad posesionHabilidad);
+public PosesionHabilidad? ObtenerPosesionHabilidad(ushort idFutbolista);
+public List&lt;PosesionHabilidad&gt; ObtenerPosesionHabilidad();</panel_attributes><additional_attributes></additional_attributes></element></diagram>
